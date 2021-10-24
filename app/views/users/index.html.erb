@@ -1,0 +1,52 @@
+
+
+  
+    
+  
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <style type="text/css">
+  	body{
+     background-color: pink;  	
+ }
+  	.float-lg-right{	
+    font-weight: bold;
+    float: right;
+
+  	}
+  </style>
+</head>
+<body>
+
+<div class="container mt-3">
+  <h2>Users</h2>          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Mobileno.</th>
+      </tr>
+    </thead>
+    <% @users.each do |user| %>
+    <tbody>
+      <tr>
+        <td><%= user.name%></td>
+        <td><%=user.mobile%></td>
+      </tr>
+    </tbody>
+    <% end %>
+  </table>
+</div>
+
+</body>
+ <div class="bg-info text-white float-lg-right"><%= link_to "New User", new_user_path %></div>
+</html>
